@@ -1,4 +1,4 @@
-package _5_1.model;
+package com.example.fxmldemo.model;
 
 import
     java.util.ArrayList;

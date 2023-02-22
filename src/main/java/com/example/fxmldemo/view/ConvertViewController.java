@@ -1,8 +1,6 @@
-package _5_1.view;
+package com.example.fxmldemo.view;
 
-import _5_1.viewmodel.ConvertViewModel;
-import _5_1.viewmodel.ViewModelFactory;
-import javafx.beans.property.Property;
+import com.example.fxmldemo.viewmodel.ConvertViewModel;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;

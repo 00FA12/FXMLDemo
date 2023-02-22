@@ -1,4 +1,4 @@
-package _5_1;
+package com.example.fxmldemo;
 
 import javafx.application.Application;
 

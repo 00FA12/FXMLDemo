@@ -1,6 +1,6 @@
-package _5_1.view;
+package com.example.fxmldemo.view;
 
-import _5_1.viewmodel.ViewModelFactory;
+import com.example.fxmldemo.viewmodel.ViewModelFactory;
 import javafx.scene.Scene;
 import javafx.scene.layout.Region;
 import javafx.stage.Stage;

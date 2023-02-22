@@ -1,5 +1,5 @@
-package _5_1.viewmodel;
-import _5_1.model.Model;
+package com.example.fxmldemo.viewmodel;
+import com.example.fxmldemo.model.Model;
 public class ViewModelFactory
 {
   private ConvertViewModel convertViewModel;

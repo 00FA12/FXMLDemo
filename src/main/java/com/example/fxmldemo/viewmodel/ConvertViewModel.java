@@ -1,6 +1,6 @@
-package _5_1.viewmodel;
+package com.example.fxmldemo.viewmodel;
 
-import _5_1.model.Model;
+import com.example.fxmldemo.model.Model;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 

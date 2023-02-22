@@ -1,11 +1,11 @@
-package _5_1;
+package com.example.fxmldemo;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
-import _5_1.model.Model;
-import _5_1.model.ModelManager;
-import _5_1.view.ViewHandler;
-import _5_1.viewmodel.ViewModelFactory;
+import com.example.fxmldemo.model.Model;
+import com.example.fxmldemo.model.ModelManager;
+import com.example.fxmldemo.view.ViewHandler;
+import com.example.fxmldemo.viewmodel.ViewModelFactory;
 public class MyApplication extends Application
 {
   public void start(Stage primaryStage)

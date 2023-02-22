@@ -1,6 +1,7 @@
-package _5_1.view;
+package com.example.fxmldemo.view;
 
-import _5_1.viewmodel.ViewModelFactory;
+import com.example.fxmldemo.MyApplication;
+import com.example.fxmldemo.viewmodel.ViewModelFactory;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.Region;
 
@@ -23,7 +24,7 @@ public class ViewFactory
     if (convertViewController == null)
     {
       FXMLLoader loader = new FXMLLoader();
-      loader.setLocation(getClass().getResource("ConvertView.fxml"));
+      loader.setLocation(MyApplication.class.getResource("ConvertView.fxml"));
       Region root = loader.load();
       convertViewController = loader.getController();
       convertViewController.init(viewHandler,
