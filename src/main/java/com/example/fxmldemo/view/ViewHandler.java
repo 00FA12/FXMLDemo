@@ -17,15 +17,15 @@ public class ViewHandler
     viewFactory = new ViewFactory(this, viewModelFactory);
     currentScene = new Scene(new Region());
   }
-  public void start(Stage stage)
+  public void start(Stage stage) throws IOException
   {
     primaryStage = stage;
-    primaryStage.show();
+    openView("RandomID");
   }
   public void openView(String id) throws IOException
   {
     Region root = viewFactory.loadView(id);
-    currentScene = new Scene(null);
+    currentScene = new Scene(root);
     currentScene.setRoot(root);
     if (root.getUserData() == null)
     {

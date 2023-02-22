@@ -6,9 +6,12 @@ import com.example.fxmldemo.model.Model;
 import com.example.fxmldemo.model.ModelManager;
 import com.example.fxmldemo.view.ViewHandler;
 import com.example.fxmldemo.viewmodel.ViewModelFactory;
+
+import java.io.IOException;
+
 public class MyApplication extends Application
 {
-  public void start(Stage primaryStage)
+  public void start(Stage primaryStage) throws IOException
   {
     Model model = new ModelManager();
     ViewModelFactory viewModelFactory = new ViewModelFactory(model);
