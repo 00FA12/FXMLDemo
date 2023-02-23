@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class MyApplication extends Application
 {
-  public void start(Stage primaryStage) throws IOException
+  public void start(Stage primaryStage)
   {
     Model model = new ModelManager();
     ViewModelFactory viewModelFactory = new ViewModelFactory(model);

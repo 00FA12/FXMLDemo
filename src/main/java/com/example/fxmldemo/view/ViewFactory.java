@@ -19,22 +19,28 @@ public class ViewFactory
     this.viewModelFactory = viewModelFactory;
   }
 
-  private Region loadConvertView() throws IOException
+  private Region loadConvertView()
   {
     if (convertViewController == null)
     {
       FXMLLoader loader = new FXMLLoader();
       loader.setLocation(MyApplication.class.getResource("ConvertView.fxml"));
-      Region root = loader.load();
-      convertViewController = loader.getController();
-      convertViewController.init(viewHandler,
-          viewModelFactory.getConvertViewModel(), root);
+      try
+      {
+        Region root = loader.load();
+        convertViewController = loader.getController();
+        convertViewController.init(viewHandler, viewModelFactory.getConvertViewModel(), root);
+      }
+      catch (IOException e)
+      {
+        e.printStackTrace();
+      }
     }
     convertViewController.reset();
     return convertViewController.getRoot();
   }
 
-  public Region loadView(String id) throws IOException
+  public Region loadView(String id)
   {
     return loadConvertView();
   }

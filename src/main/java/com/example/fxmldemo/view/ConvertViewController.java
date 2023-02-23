@@ -8,9 +8,9 @@ import javafx.scene.layout.Region;
 
 public class ConvertViewController
 {
-  @FXML TextField requestField;
-  @FXML TextField replyField;
-  @FXML Label errorLabel;
+  @FXML private TextField requestField;
+  @FXML private TextField replyField;
+  @FXML private Label errorLabel;
   private Region root;
   private ViewHandler viewHandler;
   private ConvertViewModel viewModel;
@@ -19,9 +19,9 @@ public class ConvertViewController
     this.viewHandler = viewHandler;
     this.viewModel = viewModel;
     this.root=root;
-    viewModel.getRequest().bindBidirectional(requestField.textProperty());
-    viewModel.getReply().bindBidirectional(replyField.textProperty());
-    viewModel.getError().bindBidirectional(errorLabel.textProperty());
+    viewModel.bindRequest(requestField.textProperty());
+    viewModel.bindReply(replyField.textProperty());
+    viewModel.bindError(errorLabel.textProperty());
   }
   public Region getRoot()
   {
@@ -29,13 +29,13 @@ public class ConvertViewController
   }
   public void reset()
   {}
-  @FXML void onSubmit()
+  @FXML public void onSubmit()
   {
     viewModel.convert();
   }
-  @FXML void onEnter()
+  @FXML public void onEnter()
   {
-    onSubmit();
+    viewModel.convert();
   }
   
 

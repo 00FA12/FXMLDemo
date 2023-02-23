@@ -19,27 +19,44 @@ public class ConvertViewModel
     error = new SimpleStringProperty();
   }
 
-  public StringProperty getRequest()
-  {
-    return request;
-  }
-  public StringProperty getReply()
-  {
-    return reply;
-  }
-  public StringProperty getError()
-  {
-    return error;
-  }
+
   public void convert()
   {
     try
     {
-      reply.set(model.convert(String.valueOf(request)));
+      reply.set(model.convert(request.get()));
+      error.set(null);
     }
     catch (Exception e)
     {
-      error.set(String.valueOf(new RuntimeException(e)));
+      error.set(e.getMessage());
     }
+  }
+  public String getRequest()
+  {
+    return request.get();
+  }
+  public String getReply()
+  {
+    return reply.get();
+  }
+  public String getError()
+  {
+    return error.get();
+  }
+
+  public void bindRequest(StringProperty property)
+  {
+    property.bindBidirectional(request);
+  }
+
+  public void bindReply(StringProperty property)
+  {
+    property.bindBidirectional(reply);
+  }
+
+  public void bindError(StringProperty property)
+  {
+    property.bindBidirectional(error);
   }
 }

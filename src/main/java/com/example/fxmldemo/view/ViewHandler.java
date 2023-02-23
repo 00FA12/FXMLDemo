@@ -17,12 +17,12 @@ public class ViewHandler
     viewFactory = new ViewFactory(this, viewModelFactory);
     currentScene = new Scene(new Region());
   }
-  public void start(Stage stage) throws IOException
+  public void start(Stage stage)
   {
     primaryStage = stage;
     openView("RandomID");
   }
-  public void openView(String id) throws IOException
+  public void openView(String id)
   {
     Region root = viewFactory.loadView(id);
     currentScene = new Scene(root);
